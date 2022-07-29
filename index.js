@@ -18,7 +18,7 @@ const dashboadRoutes = require('./routes/dashboard');
 const verifyToken = require('./routes/validate-token');
 
 app.use('/api/user', authRoutes);
-app.use('/api/dashboard', verifyToken, dashboadRoutes);
+app.use('/api/dashboard', verifyToken, dashboadRoutes);//verify token usarlo en las rutas que queremos que se verifique el token
 
 app.get('/', (req, res) => {
     res.json({
